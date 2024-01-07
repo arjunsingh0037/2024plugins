@@ -1,0 +1,194 @@
+@media print {
+    @page {
+        size: auto;
+    }
+}
+body {
+    font-family: Arial;
+}
+#pdf-preview {
+    font-size: 12px!important;
+}
+/* Adds below CSS to be included in PDF */
+h6, .h6 {
+    font-size: .9375rem;
+}
+h6 {
+    line-height: 1.2;
+    margin-top: 0;
+}
+.table-bordered {
+    /*border: 1px solid #dee2e6;*/
+    border: 2px solid black!important;
+}
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+table {
+    border-collapse: collapse;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+/*tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}*/
+.table thead th {
+    vertical-align: bottom;
+    border: 1px solid #dee2e6;
+}
+.table th{
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+th {
+    text-align: inherit;
+}
+.table-active, .table-active>th, .table-active>td {
+    background-color: #cecece;
+}
+.text-center {
+    text-align: center!important;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.text-nowrap {
+    white-space: nowrap!important;
+}
+.table-bordered td {
+    border: 1px solid #dee2e6;
+}
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+}
+
+/* custom force CSS */
+.bordered {
+    border: 2px solid #2B333F!important;
+}
+.bordered-ht {
+    border-top: 2px solid #2B333F!important;
+    border-bottom: 2px solid #2B333F!important;
+}
+.bordered-sides {
+    border-left: 2px solid #2B333F!important;
+    border-right: 2px solid #2B333F!important;
+}
+.bordered-bottom {
+    border-left: 2px solid #2B333F!important;
+    border-right: 2px solid #2B333F!important;
+    border-bottom: 2px solid #2B333F!important;;
+}
+
+.text-wrap {
+    font-weight: 100;
+}
+.main-head {
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+.sub-head {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.top {
+    margin-top: 4rem;
+}
+.customButton:hover {
+    outline: none;
+    box-shadow: none;
+    background: black;
+}
+.actions {
+    text-align: right;
+}
+.dashfolio-tag {
+    cursor: pointer;
+    background-color: blue;
+    padding: 5px 10px 5px 10px;
+    display: inline-block;
+    margin-top: 3px; /*incase tags go in next line, will space */
+    color: #fff;
+    margin-right: 4px;
+    background: #343a40;
+    padding-right: 20px; /* adds space inside the tags for the 'x' button */
+}
+
+.dashfolio-tag:hover{
+    opacity: 0.7;
+}
+
+.dashfolio-tag:after {
+    position: absolute;
+    content: "×";
+    padding: 2px 2px;
+    margin-left: 2px;
+    font-size: 11px;
+}
+#mail-form .row {
+    margin-bottom: 15px;
+}
+#formDiv {
+    margin: 0 auto;
+}
+#submitBtn, #cancelBtn {
+    color: #ffffff;
+}
+.p10 {
+    margin-bottom: 15px;
+}
+#attachments {
+    margin: 15px 0px 15px 0px;
+}
+.table td {
+    text-align: right;
+}
+.table-bordered {
+    border-right: 2px solid #000!important;
+}
+.tablehits thead th{
+    border-top: 3px solid #000!important;
+    border-bottom: 3px solid #000!important;
+}
+.tablehits tbody {
+    border-bottom: 3px solid #000000;
+}
+.tablehits table {
+    width: 30%;
+}
+.double {
+    border-bottom: 1px solid #000;
+}
+.double td{
+    padding: 1.5px;
+    border-bottom: 2px solid #000;
+}
+.custom-border {
+    border:1px solid #fff!important;
+    padding: 1px!important;
+}
+.margin-b1 {
+    margin-bottom: 1px!important;
+}
+td{
+    padding-right: 10px;
+}
+.table-active, .table-active>th, .table-active>td {
+    padding-right: 10px;
+}
+th {
+    text-align: inherit;
+    font-size: 12px!important;
+    padding: 0.8em;
+}

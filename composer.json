@@ -1,0 +1,6 @@
+{
+    "require": {
+        "mpdf/mpdf": "^8.0",
+        "mikehaertl/phpwkhtmltopdf": "^2.5"
+    }
+}
