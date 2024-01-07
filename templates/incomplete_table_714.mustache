@@ -1,0 +1,45 @@
+<table width="100%" autosize="1.3" style="page-break-after: always;">
+    <tr>
+        <th style="border-bottom: 1px solid #0000;">
+            INACTIVE 7-14 DAYS
+        </th>
+        {{#states}}
+            <th class="text-center bordered">
+                {{.}}
+            </th>
+        {{/states}}
+        <th class="text-center bordered">
+            TOTAL
+        </th>
+        <th class="text-center bordered">
+            Net Change
+        </th>
+        <th class="last text-center bordered table-active">
+            {{yesterday}}
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    {{> report_trainingenrolment/admin_core_incomplete714 }}
+    {{> report_trainingenrolment/full_core_incomplete714 }}
+    <tr class="total-enrolment bordered">
+        <th class="text-nowrap" scope="row">Total Incomplete</th>
+        {{#admin_total_core714}}
+            <th class="bold" style="text-align:right">{{ACT}}</th>
+            <th class="bold" style="text-align:right">{{NSW}}</th>
+            <th class="bold" style="text-align:right">{{NT}}</th>
+            <th class="bold" style="text-align:right">{{QLD}}</th>
+            <th class="bold" style="text-align:right">{{SA}}</th>
+            <th class="bold" style="text-align:right">{{TAS}}</th>
+            <th class="bold" style="text-align:right">{{VIC}}</th>
+            <th class="bold" style="text-align:right">{{WA}}</th>
+            <th style="text-align:right;font-weight: bold" class="total-col">{{total_sum_stats}}</th>
+            <th style="text-align:right;font-weight: bold" class="increase-col">{{increase_stats}}</th>
+            <th style="text-align:right;font-weight: bold" class="last bordered table-active">{{previous_stats}}</th>
+        {{/admin_total_core714}}
+    </tr>
+    <tr class="double">
+        <td colspan="12"></td>
+    </tr>
+    </tbody>
+</table>

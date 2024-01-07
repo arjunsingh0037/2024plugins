@@ -1,0 +1,35 @@
+<tr><th colspan="11">Pfizer Completions</th><th class="bordered-sides table-active"></th></tr>
+    {{#pfizer_completion}}
+        {{#countdata}}
+            <tr>
+                <th class="text-wrap" scope="row">{{typename}}</th>
+                <td nowrap="nowrap" style="text-align:right;">{{ACT.mean}}</td>
+                <td nowrap="nowrap" style="text-align:right;">{{NSW.mean}}</td>
+                <td nowrap="nowrap" style="text-align:right;">{{NT.mean}}</td>
+                <td nowrap="nowrap" style="text-align:right;">{{QLD.mean}}</td>
+                <td nowrap="nowrap" style="text-align:right;">{{SA.mean}}</td>
+                <td nowrap="nowrap" style="text-align:right;">{{TAS.mean}}</td>
+                <td nowrap="nowrap" style="text-align:right;">{{VIC.mean}}</td>
+                <td nowrap="nowrap" style="text-align:right;">{{WA.mean}}</td>
+                <td class="total-col" nowrap="nowrap" style="text-align:right;font-weight:bold" width="8%">{{total_overall_mean}}</td>
+                <td class="increase-col" nowrap="nowrap" style="text-align:right;font-weight:bold" width="8%">{{increase_overall_mean}}</td>
+                <td class="bordered-sides table-active" nowrap="nowrap" style="text-align:right;" width="12%">{{previous_overall_mean}}</td>
+            </tr>
+        {{/countdata}}
+        {{#total_mean_row}}
+            <tr class="total bordered">
+                <th class="text-nowrap" scope="row">Total</th>
+                <th style="text-align:right">{{ACT}}</th>
+                <th style="text-align:right">{{NSW}}</th>
+                <th style="text-align:right">{{NT}}</th>
+                <th style="text-align:right">{{QLD}}</th>
+                <th style="text-align:right">{{SA}}</th>
+                <th style="text-align:right">{{TAS}}</th>
+                <th style="text-align:right">{{VIC}}</th>
+                <th style="text-align:right">{{WA}}</th>
+                <th style="text-align:right" class="total-col">{{total_overall_combined}}</th>
+                <th style="text-align:right" class="increase-col">{{total_overall_increase}}</th>
+                <td style="text-align:right" class="last bordered table-active">{{total_overall_previous}}</td>
+            </tr>
+        {{/total_mean_row}}
+    {{/pfizer_completion}}

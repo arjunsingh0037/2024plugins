@@ -1,0 +1,53 @@
+<table width="100%" autosize="1.3" style="page-break-after: always;border-collapse: collapse;">
+
+<tr>
+        <th class="custom-border">
+            MEAN (days)
+        </th>
+        <th class="text-center bordered" >
+            ACT
+        </th>
+        <th class="text-center bordered">
+            NSW
+        </th>
+        <th class="text-center bordered">
+            NT
+        </th>
+        <th class="text-center bordered">
+            QLD
+        </th>
+        <th class="text-center bordered">
+            SA
+        </th>
+        <th class="text-center bordered">
+            TAS
+        </th>
+        <th class="text-center bordered">
+            VIC
+        </th>
+        <th class="text-center bordered">
+            WA
+        </th>
+        <th class="text-center bordered">
+            OVERALL MEAN
+        </th>
+        <th class="text-center bordered">
+            Net Change
+        </th>
+        <th class="last text-center bordered table-active" style="border: 2px solid #2B333F!important;">
+            {{yesterday}}
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    {{> report_trainingenrolment/admin_core_mean }}
+    {{> report_trainingenrolment/full_core_mean }}
+    {{> report_trainingenrolment/pfizer_mean }}
+    {{> report_trainingenrolment/astra_mean }}
+    {{> report_trainingenrolment/moderna_mean }}
+    {{> report_trainingenrolment/pfizer2_mean }}
+    <tr class="double">
+        <td colspan="12"></td>
+    </tr>
+    </tbody>
+</table>

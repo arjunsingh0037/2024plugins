@@ -1,0 +1,48 @@
+<table width="100%" autosize="1.0" style="page-break-after: always;">
+
+    <tr>
+        <th class="emptyth"></th>
+        {{#states}}
+            <th class="text-center bordered">
+               {{.}}
+            </th>
+        {{/states}}
+        <th class="text-center bordered">
+            TOTAL
+        </th>
+        <th class="text-center bordered">
+            Increase
+        </th>
+        <th class="last text-center bordered table-active">
+            {{yesterday}}
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    {{> report_trainingenrolment/admin_core_module }}
+    {{> report_trainingenrolment/full_core_enrolment }}
+    <tr class="total-enrolment bordered">
+        <th class="text-nowrap" scope="row">Total Core Enrolments</th>
+        {{#admin_total_core}}
+        <th class="bold" style="text-align:right">{{ACT}}</th>
+        <th class="bold" style="text-align:right">{{NSW}}</th>
+        <th class="bold" style="text-align:right">{{NT}}</th>
+        <th class="bold" style="text-align:right">{{QLD}}</th>
+        <th class="bold" style="text-align:right">{{SA}}</th>
+        <th class="bold" style="text-align:right">{{TAS}}</th>
+        <th class="bold" style="text-align:right">{{VIC}}</th>
+        <th class="bold" style="text-align:right">{{WA}}</th>
+        <th style="text-align:right;font-weight: bold" class="total-col">{{total_sum_stats}}</th>
+        <th style="text-align:right;font-weight: bold" class="increase-col">{{increase_stats}}</th>
+        <th style="text-align:right;font-weight: bold" class="last bordered table-active">{{previous_stats}}</th>
+        {{/admin_total_core}}
+    </tr>
+    <tr class="double">
+        <td colspan="12"></td>
+    </tr>
+    {{> report_trainingenrolment/pfizer_enrolment }}
+    {{> report_trainingenrolment/astra_enrolment }}
+    {{> report_trainingenrolment/moderna_enrolment }}
+    {{> report_trainingenrolment/pfizer2_enrolment }}
+    </tbody>
+</table>

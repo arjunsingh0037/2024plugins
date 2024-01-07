@@ -1,0 +1,26 @@
+<div class="col-md-12 text-right m-b-2">
+    <a href="{{export_url}}" class="btn btn-default">
+        <i class="fa fa-file-excel-o fa-fw"></i> Export to Excel
+    </a>
+</div>
+
+<div class="col-md-12">
+    <ul class="nav nav-tabs">
+        {{#states}}
+            <li class="nav-item">
+                <a class="nav-link {{#first}}active{{/first}}" id="nav-{{shortname}}-tab" data-toggle="tab"
+                   href="#nav-{{shortname}}" role="tab" aria-controls="nav-{{shortname}}"
+                   aria-selected="true">{{label}}</a>
+            </li>
+        {{/states}}
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+        {{#states}}
+            <div class="tab-pane fade show {{#first}}active{{/first}}" id="nav-{{shortname}}" role="tabpanel"
+                 aria-labelledby="nav-{{shortname}}-tab">
+                {{>report_trainingenrolment/_postcode-report-display-table}}
+            </div>
+        {{/states}}
+    </div>
+</div>

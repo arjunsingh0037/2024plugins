@@ -1,0 +1,35 @@
+<tr><th colspan="11">Full Core Modules 1-6</th><th class="bordered-sides table-active"></th></tr>
+{{#full_core_incomplete14plus}}
+    {{#countdata}}
+        <tr>
+            <th class="text-wrap" scope="row">{{typename}}</th>
+            <td nowrap="nowrap" style="text-align:right;">{{ACT.usercount}}</td>
+            <td nowrap="nowrap" style="text-align:right;">{{NSW.usercount}}</td>
+            <td nowrap="nowrap" style="text-align:right;">{{NT.usercount}}</td>
+            <td nowrap="nowrap" style="text-align:right;">{{QLD.usercount}}</td>
+            <td nowrap="nowrap" style="text-align:right;">{{SA.usercount}}</td>
+            <td nowrap="nowrap" style="text-align:right;">{{TAS.usercount}}</td>
+            <td nowrap="nowrap" style="text-align:right;">{{VIC.usercount}}</td>
+            <td nowrap="nowrap" style="text-align:right;">{{WA.usercount}}</td>
+            <td class="total-col" nowrap="nowrap" style="text-align:right;font-weight:bold" width="8%">{{total}}</td>
+            <td class="increase-col" nowrap="nowrap" style="text-align:right;font-weight:bold" width="8%">{{increase}}</td>
+            <td class="bordered-sides table-active" nowrap="nowrap" style="text-align:right;" width="12%">{{previous}}</td>
+        </tr>
+    {{/countdata}}
+    {{#col_count_total}}
+        <tr class="total bordered">
+            <th class="text-nowrap" scope="row">Total</th>
+            <th style="text-align:right">{{ACT}}</th>
+            <th style="text-align:right">{{NSW}}</th>
+            <th style="text-align:right">{{NT}}</th>
+            <th style="text-align:right">{{QLD}}</th>
+            <th style="text-align:right">{{SA}}</th>
+            <th style="text-align:right">{{TAS}}</th>
+            <th style="text-align:right">{{VIC}}</th>
+            <th style="text-align:right">{{WA}}</th>
+            <th style="text-align:right" class="total-col">{{total_sum}}</th>
+            <th style="text-align:right" class="increase-col">{{increase}}</th>
+            <td style="text-align:right" class="last bordered table-active">{{previous}}</td>
+        </tr>
+    {{/col_count_total}}
+{{/full_core_incomplete14plus}}

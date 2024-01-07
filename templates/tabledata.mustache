@@ -1,0 +1,64 @@
+{{#actions}}
+<div class="actions">
+    <!--<button id="mailButton" class="customButton btn btn-md btn-primary" type="button" onclick="window.location.href='{{{mailurl}}}'">
+        <span class="fa fa-envelope-o"></span> Mail to Users
+    </button>-->
+    <button id="exportButton" class="customButton btn btn-md btn-primary">
+        <span class="fa fa-file-pdf-o"></span> {{#str}}exportbutton, report_trainingenrolment{{/str}}
+    </button>
+</div>
+{{/actions}}
+<div class="main-content" id="pdf-preview">
+    <div class="enrolmentpage-report">
+        <h6 class="main-head">{{#str}}enrolment_mainhead, report_trainingenrolment{{/str}} </h6>
+        <h6 class="sub-head" style="font-size:.9375rem;">STATS AS ON <span id="dated">{{selecteddate}}</span></h6>
+        {{> report_trainingenrolment/enrolment_table }}
+    </div>
+    <div class="incompletepage-report top table37">
+        <h6 class="main-head">COVID-19 VACCINATION TRAINING PROGRAM:INCOMPLETE </h6>
+        <h6 class="sub-head">STATS AS ON {{selecteddate}}</h6>
+        {{> report_trainingenrolment/incomplete_table_37 }}
+    </div>
+    <div class="incompletepage-report top table714">
+        <h6 class="main-head">COVID-19 VACCINATION TRAINING PROGRAM:INCOMPLETE </h6>
+        <h6 class="sub-head">STATS AS ON {{selecteddate}}</h6>
+        {{> report_trainingenrolment/incomplete_table_714 }}
+    </div>
+    <div class="incompletepage-report top table14plus">
+        <h6 class="main-head">COVID-19 VACCINATION TRAINING PROGRAM:INCOMPLETE </h6>
+        <h6 class="sub-head">STATS AS ON {{selecteddate}}</h6>
+        {{> report_trainingenrolment/incomplete_table_14plus }}
+        <br>
+        {{> report_trainingenrolment/incomplete_table_non14 }}
+    </div>
+    <div class="incompletepage-report top tablecomplete">
+        <h6 class="main-head">COVID-19 VACCINATION TRAINING PROGRAM:COMPLETION TIME </h6>
+        <h6 class="sub-head margin-b1">STATS AS ON {{selecteddate}}</h6>
+        {{> report_trainingenrolment/mean_table_completion }}
+    </div>
+    <div class="incompletepage-report top tablecomplete">
+        <h6 class="main-head">COVID-19 VACCINATION TRAINING PROGRAM:COMPLETION </h6>
+        <h6 class="sub-head margin-b1">STATS AS ON {{selecteddate}}</h6>
+        {{> report_trainingenrolment/completion_table }}
+    </div>
+    <div class="incompletepage-report top tablehits">
+        <h6 class="main-head">COVID-19 VACCINATION TRAINING PROGRAM:HITS </h6>
+        <h6 class="sub-head">STATS AS ON {{selecteddate}}</h6>
+        <table width="30%" class="bordered-ht" autosize="1.3" >
+            <thead>
+            <tr>
+                <th class="text-center">DAY</th>
+                <th class="text-center">HITS</th>
+            </tr>
+            </thead>
+            <tbody class="bordered-ht">
+            {{#hits}}
+            <tr>
+                <td class="text-center" style="text-align: center">{{day}}</td>
+                <td class="text-center" style="text-align: center">{{hit}}</td>
+            </tr>
+            {{/hits}}
+            </tbody>
+        </table>
+    </div>
+</div>

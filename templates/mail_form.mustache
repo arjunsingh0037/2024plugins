@@ -1,0 +1,42 @@
+<h2 class="h1-responsive font-weight-bold text-center my-4">Send Mail to Users</h2>
+<p class="text-center w-responsive mx-auto mb-5">Please type in users email addresses using comma seperated values.
+<div class="col-md-9 mb-md-0 mb-5" id="formDiv">
+    <form id="mail-form" name="mail-form">
+        <div class="row">
+            <div class="col-md-12 tag-container" id="tag-container"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="md-form mb-0">
+                    <input type="text" value="" placeholder="Add user email here.." id="add-tag-input" class="form-control p10"/>
+                    <input type="text" id="subject" name="subject" class="form-control p10" placeholder="Mail Subject">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="md-form">
+                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Message Body"></textarea>
+                </div>
+                <fieldset id="attachments">
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label">Attachments : </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="inlineCheckbox[]" value="pdf">
+                        <label class="form-check-label">PDF</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="inlineCheckbox[]" value="excel">
+                        <label class="form-check-label">Excel</label>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </form>
+    <div class="text-center text-md-left">
+        <a class="btn btn-primary" id="submitBtn">Submit</a>
+        <a class="btn btn-dark" id="cancelBtn">Cancel</a>
+    </div>
+    <div class="status"></div>
+</div>

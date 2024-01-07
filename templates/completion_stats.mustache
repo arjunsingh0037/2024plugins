@@ -1,0 +1,108 @@
+<table width="100%" autosize="1.0" style="page-break-after: always;">
+    <tbody>
+    <tr>
+        <th class="emptyth text-nowrap" colspan="12" style="width:88%;"></th>
+        <th class="bordered-sides table-active" style="width:12%;"></th>
+    </tr>
+    <tr>
+        <th class="text-nowrap" scope="row"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right">Enrolments</th>
+        <th style="text-align:right" class="total-col">{{admincore_totalstats}}</th>
+        <th style="text-align:right" class="increase-col">{{admincore_increasestats}}</th>
+        <td style="text-align:right" class="last bordered-sides table-active">{{admincore_previousstats}}</td>
+    </tr>
+    <tr>
+        <th class="text-nowrap" scope="row"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right">Completion % - Core</th>
+        {{#core_stats}}
+            <th style="text-align:right" class="total-col">{{total}}</th>
+            <th style="text-align:right" class="increase-col"></th>
+            <td style="text-align:right" class="last bordered-sides table-active">{{previous}}</td>
+        {{/core_stats}}
+    </tr>
+    <tr>
+        <th class="text-nowrap" scope="row"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right">Completion % - Pfizer</th>
+        {{#pfizer_stats}}
+            <th style="text-align:right" class="total-col">{{total}}</th>
+            <th style="text-align:right" class="increase-col"></th>
+            <td style="text-align:right" class="last bordered-sides table-active">{{previous}}</td>
+        {{/pfizer_stats}}
+    </tr>
+    <tr>
+        <th class="text-nowrap" scope="row"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right">Completion % - AZ</th>
+        {{#astra_stats}}
+            <th style="text-align:right" class="total-col">{{total}}</th>
+            <th style="text-align:right" class="increase-col"></th>
+            <td style="text-align:right" class="last bordered-sides table-active">{{previous}}</td>
+        {{/astra_stats}}
+    </tr>
+    <tr>
+        <th class="text-nowrap" scope="row"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right">Completion % - Moderna</th>
+        {{#moderna_stats}}
+            <th style="text-align:right" class="total-col">{{total}}</th>
+            <th style="text-align:right" class="increase-col"></th>
+            <td style="text-align:right" class="last bordered-sides table-active">{{previous}}</td>
+        {{/moderna_stats}}
+    </tr>
+    <tr>
+        <th class="text-nowrap" scope="row"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right"></th>
+        <th style="text-align:right">Completion % - Pfizer2</th>
+        {{#pfizer2_stats}}
+            <th style="text-align:right" class="total-col">{{total}}</th>
+            <th style="text-align:right" class="increase-col"></th>
+            <td style="text-align:right" class="last bordered-bottom table-active">{{previous}}</td>
+        {{/pfizer2_stats}}
+    </tr>
+    </tbody>
+</table>

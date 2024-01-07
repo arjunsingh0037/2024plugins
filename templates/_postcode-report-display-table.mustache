@@ -1,0 +1,30 @@
+<div class="table-responsive m-t-2">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <td>Postcode</td>
+            <td>Admin (Modules 1 -3)</td>
+            <td>Non-Ahpra</td>
+            <td>Medical Practitioner</td>
+            <td>Nurse/Midwife</td>
+            <td>Paramedic</td>
+            <td>Pharmacist</td>
+            <td>ATSI</td>
+        </tr>
+        </thead>
+        <tbody>
+        {{#postcodes}}
+            <tr>
+                <td>{{postcode}}</td>
+                <td>{{count_admin}}</td>
+                <td>{{count0}}</td>
+                <td>{{count1}}</td>
+                <td>{{count2}}</td>
+                <td>{{count3}}</td>
+                <td>{{count4}}</td>
+                <td>{{count5}}</td>
+            </tr>
+        {{/postcodes}}
+        </tbody>
+    </table>
+</div>

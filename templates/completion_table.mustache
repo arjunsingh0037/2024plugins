@@ -1,0 +1,30 @@
+<table width="100%" autosize="1.0">
+
+    <tr>
+        <th class="emptyth"></th>
+        {{#states}}
+            <th class="text-center bordered">
+               {{.}}
+            </th>
+        {{/states}}
+        <th class="text-center bordered">
+            TOTAL
+        </th>
+        <th class="text-center bordered">
+            Increase
+        </th>
+        <th class="last text-center bordered table-active">
+            {{yesterday}}
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    {{> report_trainingenrolment/admin_core_completion }}
+    {{> report_trainingenrolment/full_core_completion }}
+    {{> report_trainingenrolment/pfizer_completion }}
+    {{> report_trainingenrolment/astra_completion }}
+    {{> report_trainingenrolment/moderna_completion }}
+    {{> report_trainingenrolment/pfizer2_completion }}
+    </tbody>
+</table>
+{{> report_trainingenrolment/completion_stats }}
