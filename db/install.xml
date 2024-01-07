@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="report/trainingenrolment/db" VERSION="20211215" COMMENT="XMLDB file for Moodle report/trainingenrolment"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="report_covid_completions" COMMENT="This table contains the master data of all module completions based on the actual completion date">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="20" NOTNULL="true" SEQUENCE="false" COMMENT="ID of the user"/>
+        <FIELD NAME="firstname" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="First name of the user"/>
+        <FIELD NAME="lastname" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="Last name of the user"/>
+        <FIELD NAME="email" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="Email address of the user"/>
+        <FIELD NAME="firstaccess" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false" COMMENT="The date that they first access the site"/>
+        <FIELD NAME="lastaccess" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false" COMMENT="The last time that the user accessed this course"/>
+        <FIELD NAME="cohorts" TYPE="char" LENGTH="1333" NOTNULL="false" SEQUENCE="false" COMMENT="Cohorts that the user belongs to"/>
+        <FIELD NAME="ugroups" TYPE="char" LENGTH="1333" NOTNULL="false" SEQUENCE="false" COMMENT="Groups that the user belongs to"/>
+        <FIELD NAME="user_type" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false" COMMENT="Type of user (No Ahpra ID, Medical Practitioner, Nurse, Paramedic etc)"/>
+        <FIELD NAME="account_created" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false" COMMENT="The time that the account was created on"/>
+        <FIELD NAME="ahpra_number" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="AHPRA number of the user"/>
+        <FIELD NAME="employer_name" TYPE="char" LENGTH="1333" NOTNULL="false" SEQUENCE="false" COMMENT="Name of the employer"/>
+        <FIELD NAME="profession" TYPE="char" LENGTH="1333" NOTNULL="false" SEQUENCE="false" COMMENT="Profession of the user. This is fetched from profile_field_profession"/>
+        <FIELD NAME="home_state" TYPE="char" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT="Home state"/>
+        <FIELD NAME="home_postcode" TYPE="char" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT="This field contains the home postcode of the user"/>
+        <FIELD NAME="work_state" TYPE="char" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT="Work state"/>
+        <FIELD NAME="admin_cm_enrolled" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Is the user enrolled in Admin modules"/>
+        <FIELD NAME="admin_cm_enrol_time" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false" COMMENT="Time that the user has been enrolled"/>
+        <FIELD NAME="admin_cm_completed" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Have the admin modules been completed"/>
+        <FIELD NAME="admin_cm_date" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false" COMMENT="Completion date if the admin modules have been completed"/>
+        <FIELD NAME="admin_cm_duration" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false" COMMENT="Time that is took from enrolment to the completion of the module"/>
+        <FIELD NAME="full_cm_enrolled" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Is the user enrolled in Full core modules"/>
+        <FIELD NAME="full_cm_enrol_time" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false"/>
+        <FIELD NAME="full_cm_completed" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Whether full core modules have been completed"/>
+        <FIELD NAME="full_cm_date" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false" COMMENT="Date that the full core modules were completed"/>
+        <FIELD NAME="full_cm_duration" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false" COMMENT="Time that is took from enrolment to the completion of the module"/>
+        <FIELD NAME="pfizer_enrolled" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Is the user enrolled in the pfizer modules"/>
+        <FIELD NAME="pfizer_enrol_time" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false"/>
+        <FIELD NAME="pfizer_completed" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Has the Pfizer modules been completed"/>
+        <FIELD NAME="pfizer_date" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false" COMMENT="Date that the Pfizer module was completed"/>
+        <FIELD NAME="pfizer_duration" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false" COMMENT="Time that is took from enrolment to the completion of the module"/>
+        <FIELD NAME="astrazeneca_enrolled" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Is the user enrolled in Astrazeneca module"/>
+        <FIELD NAME="astrazeneca_enrol_time" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false"/>
+        <FIELD NAME="astrazeneca_completed" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Has the astrazeneca module been completed"/>
+        <FIELD NAME="astrazeneca_date" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false" COMMENT="Date that the astrazeneca module was completed"/>
+        <FIELD NAME="astrazeneca_duration" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false" COMMENT="Time that is took from enrolment to the completion of the module"/>
+        <FIELD NAME="moderna_enrolled" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Is the user enrolled in the Moderna module"/>
+        <FIELD NAME="moderna_enrol_time" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false"/>
+        <FIELD NAME="moderna_completed" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Has the moderna module been completed"/>
+        <FIELD NAME="moderna_date" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false" COMMENT="Date that the moderna module was marked completed"/>
+        <FIELD NAME="moderna_duration" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false" COMMENT="Time that is took from enrolment to the completion of the module"/>
+        <FIELD NAME="pfizer2_enrolled" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Is the user enrolled in the Pfizer Paediatric module"/>
+        <FIELD NAME="pfizer2_enrol_time" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false"/>
+        <FIELD NAME="pfizer2_completed" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Has the pfizer paediatric module been completed"/>
+        <FIELD NAME="pfizer2_date" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false" COMMENT="Date that the pfizer paediatric module was marked completed"/>
+        <FIELD NAME="pfizer2_duration" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false" COMMENT="Time that is took from enrolment to the completion of the module"/>
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="20" NOTNULL="true" SEQUENCE="false" COMMENT="Time that this record was created"/>
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="20" NOTNULL="true" SEQUENCE="false" COMMENT="Time that this record was last modified"/>
+        <FIELD NAME="deleted" TYPE="int" LENGTH="1" NOTNULL="false" DEFAULT="0" SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="report_covid_hits" COMMENT="This table stores the daily hits data">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="day" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="Date in d-m-Y format"/>
+        <FIELD NAME="hits" TYPE="int" LENGTH="20" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="The number of hits all day"/>
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="20" NOTNULL="true" SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="report_covid_p_details" COMMENT="This table is used for the adhoc participant report that has the details and the completion">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="module" TYPE="int" LENGTH="1" NOTNULL="true" SEQUENCE="false" COMMENT="The module that the user has completed"/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="20" NOTNULL="true" SEQUENCE="false" COMMENT="ID of the user"/>
+        <FIELD NAME="firstname" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="Firstname of the user"/>
+        <FIELD NAME="lastname" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="Last name of the user"/>
+        <FIELD NAME="ahpra_number" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="AHPRA registration number of the user"/>
+        <FIELD NAME="email" TYPE="char" LENGTH="1333" NOTNULL="true" SEQUENCE="false" COMMENT="Email ID of the user"/>
+        <FIELD NAME="home_state" TYPE="char" LENGTH="4" NOTNULL="false" SEQUENCE="false" COMMENT="Home state of the user"/>
+        <FIELD NAME="home_postcode" TYPE="char" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT="Postcode of the user"/>
+        <FIELD NAME="user_type" TYPE="int" LENGTH="1" NOTNULL="false" SEQUENCE="false" COMMENT="Type of user based on their registration number"/>
+        <FIELD NAME="timecompleted" TYPE="int" LENGTH="20" NOTNULL="false" SEQUENCE="false" COMMENT="Time that the module was completed"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>
